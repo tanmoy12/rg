@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.SettingsController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+        <tabs>
+          <Tab text="Untitled Tab 2">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+               </content>
+            </Tab>
+          <Tab text="ACCOUNTS">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="31.0" prefWidth="600.0">
+                           <children>
+                              <Label text="ACCOUNTS">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="57.0" prefWidth="600.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#ViewButtClick" prefHeight="25.0" prefWidth="132.0" text="VIEW" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="StAddAccount" mnemonicParsing="false" onAction="#StAddAccountClick" prefHeight="25.0" prefWidth="132.0" text="ADD ACCOUNT" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="StAccounts" editable="true" prefHeight="388.0" prefWidth="567.0">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="StUsernameCol" prefWidth="75.0" text="USERNAME" />
+                                    <TableColumn fx:id="StTypeCol" prefWidth="65.0" text="TYPE" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.UsersController">
+    <stylesheets>
+        <URL value="@users.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="BOTTOM_RIGHT" layoutX="109.0" layoutY="74.0" spacing="20.0">
+         <children>
+            <HBox spacing="80.0">
+               <children>
+                  <Label layoutX="9.0" layoutY="5.0" text="USERNAME  " />
+                  <TextField fx:id="StUsername" layoutX="93.0" maxWidth="250.0" prefHeight="25.0" prefWidth="180.0" />
+               </children>
+            </HBox>
+            <HBox spacing="70.0">
+               <children>
+                  <Label layoutX="228.0" layoutY="5.0" prefHeight="15.0" prefWidth="79.0" text="PASSWORD" />
+                  <PasswordField fx:id="StPassword" prefWidth="180.0" />
+               </children>
+            </HBox>
+            <MenuButton fx:id="StAccountTypeDrop" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="ACCOUNT TYPE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#StAdminClick" text="ADMIN" />
+                  <MenuItem mnemonicParsing="false" onAction="#StEmployeeClick" text="EMPLOYEE" />
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <Button fx:id="UsDoneButt" layoutX="346.0" layoutY="237.0" mnemonicParsing="false" onAction="#UsDoneButtClick" style="-fx-background-color: #252AC2;" text="ADD ACCOUNT" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button fx:id="UsDeleteButt" disable="true" layoutX="47.0" layoutY="239.0" mnemonicParsing="false" onAction="#UsDeleteButtClick" style="-fx-background-color: #252AC2;" text="DELETE" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

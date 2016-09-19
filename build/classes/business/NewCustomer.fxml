@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="NcAnchorPane" maxHeight="550.0" maxWidth="770.0" minHeight="550.0" minWidth="770.0" prefHeight="550.0" prefWidth="770.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.NewCustomerController">
+    <stylesheets>
+        <URL value="@newsupplier.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="216.0" layoutY="35.0" text="ENTER CUSTOMER INFORMATION">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="255.0" text="BALANCE BY&#10;DELIVERY*            :">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="350.0" text="ADDRESS             :">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="207.0" text="BALANCE BY&#10;ORDER*                 :">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="116.0" text="CUSTOMER NAME*:">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="169.0" text="INSTITUTE NAME* :">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="NcAddress" layoutX="219.0" layoutY="350.0" prefHeight="68.0" prefWidth="167.0" />
+      <Label fx:id="NcPhoneNo" layoutX="412.0" layoutY="358.0" text="PHONE NO          :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NcMobileNo" layoutX="554.0" layoutY="358.0" prefHeight="25.0" prefWidth="167.0" />
+      <Button fx:id="NcDoneButt" layoutX="671.0" layoutY="474.0" mnemonicParsing="false" onAction="#NewCustomerInput" style="-fx-background-color: #252AC2;" text="DONE" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="412.0" layoutY="135.0" prefHeight="25.0" prefWidth="138.0" text="REMARKS             :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="NcRemarks" layoutX="556.0" layoutY="133.0" prefHeight="58.0" prefWidth="167.0" />
+      <TextField fx:id="NcCustomerName" layoutX="219.0" layoutY="135.0" prefHeight="25.0" prefWidth="167.0" />
+      <RadioButton fx:id="NcBalanceDeliveryDebitRadio" layoutX="424.0" layoutY="296.0" mnemonicParsing="false" text="DEBIT">
+         <toggleGroup>
+            <ToggleGroup fx:id="Balance1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="NcBalanceDeliveryCreditRadio" layoutX="526.0" layoutY="297.0" mnemonicParsing="false" text="CREDIT" toggleGroup="$Balance1" />
+      <RadioButton fx:id="NcBalanceOrderCreditRadio" layoutX="525.0" layoutY="251.0" mnemonicParsing="false" text="CREDIT">
+         <toggleGroup>
+            <ToggleGroup fx:id="Balance" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="NcBalanceOrderDebitRadio" layoutX="423.0" layoutY="250.0" mnemonicParsing="false" text="DEBIT" toggleGroup="$Balance" />
+      <Label layoutX="410.0" layoutY="177.0" text="CUSTOMER&#10;SERIAL*">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="NcCustomerSerial" layoutX="555.0" layoutY="210.0" prefHeight="25.0" prefWidth="167.0" />
+      <Button fx:id="NcDeleteButt" layoutX="52.0" layoutY="462.0" mnemonicParsing="false" onAction="#DeleteCustomerInput" style="-fx-background-color: #252AC2;" text="DELETE" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

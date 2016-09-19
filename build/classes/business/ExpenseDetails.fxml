@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.ExpenseDetailsController">
+   <children>
+      <VBox prefHeight="261.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="500.0">
+               <children>
+                  <Label text="EXPENSE ENTRIES">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="67.0" prefWidth="395.0">
+               <children>
+                  <VBox fx:id="EeExpenseV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="EXPENSE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="REMARKS">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="EeRemarks">
+                           <VBox.margin>
+                              <Insets right="3.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="EeBankCashV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="BANK/CASH">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="67.0" prefWidth="395.0">
+               <children>
+                  <VBox fx:id="EeAmountV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="AMOUNT">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="SUBJECT">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="EeLp">
+                           <VBox.margin>
+                              <Insets right="3.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="700.0" spacing="10.0">
+         <children>
+            <Button fx:id="SaveButt" mnemonicParsing="false" onAction="#SaveButtClick" prefHeight="25.0" prefWidth="87.0" text="SAVE" />
+            <Button fx:id="DeleteButt" mnemonicParsing="false" onAction="#DeleteButtClick" prefHeight="25.0" prefWidth="89.0" text="DELETE">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="89.0" layoutY="91.0" prefHeight="17.0" prefWidth="92.0" text="USERNAME  :" />
+      <Label layoutX="87.0" layoutY="142.0" prefHeight="17.0" prefWidth="92.0" text="PASSWORD  :" />
+      <VBox alignment="CENTER_RIGHT" layoutX="233.0" layoutY="87.0" spacing="22.0">
+         <children>
+            <TextField fx:id="LgUsername" layoutX="235.0" layoutY="87.0" prefHeight="30.0" prefWidth="166.0" promptText="USERNAME" />
+            <PasswordField fx:id="LgPassword" layoutX="233.0" layoutY="138.0" prefHeight="28.0" promptText="PASSWORD" />
+            <MenuButton fx:id="StAccountTypeDrop" layoutX="261.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="ACCOUNT TYPE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#StAdminClick" text="ADMIN" />
+                  <MenuItem mnemonicParsing="false" onAction="#StEmployeeClick" text="EMPLOYEE" />
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <Button fx:id="DoneButt" layoutX="358.0" layoutY="239.0" mnemonicParsing="false" onAction="#DoneButtClick" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #252AC2;" text="SUBMIT" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Label layoutX="136.0" layoutY="29.0" text="LOG INTO RG TRADING">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

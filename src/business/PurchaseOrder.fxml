@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.PurchaseOrderController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="700.0">
+         <children>
+            <Label text="PURCHASE ORDER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="151.0" prefWidth="700.0">
+         <children>
+            <HBox prefWidth="1000.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="PoSupplierV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="SUPPLIER" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="PoInstituteV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="INSTITUTE" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="ORDER NO." />
+                        <TextField fx:id="PoOrderNo" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="LP" />
+                        <TextField fx:id="PoLp" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <VBox fx:id="PoProductV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="PRODUCT" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="PoStorageV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="STORAGE" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="PoQuantityV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="QUANTITY" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="UNIT" />
+                                    <TextField fx:id="PoUnit" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <HBox.margin>
+                                    <Insets top="17.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <MenuButton fx:id="PoTypeDrop" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="UNIT">
+                                       <items>
+                                          <RadioMenuItem fx:id="PoTypeKg" mnemonicParsing="false" onAction="#SetTextForPurchaseOrderTypeKg" text="KG" />
+                                          <RadioMenuItem fx:id="PoTypeMon" mnemonicParsing="false" onAction="#SetTextForPurchaseOrderTypeMon" text="MON" />
+                                          <RadioMenuItem fx:id="PoTypePiece" mnemonicParsing="false" onAction="#SetTextForPurchaseOrderTypePiece" text="PIECE" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox fx:id="PoRateKgV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="RATE/KG/PIECE" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="PoRateMonV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="RATE/MON" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="PoPriceV" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="PRICE" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="0.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="PoDeleteButt" mnemonicParsing="false" onAction="#PoDeleteButtClick" prefHeight="25.0" prefWidth="102.0" text="DELETE" />
+                  <Button fx:id="PoEditButt" mnemonicParsing="false" onAction="#PoEditButtClick" prefHeight="25.0" prefWidth="100.0" text="EDIT" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="PoEnterProductInfoButt" mnemonicParsing="false" onAction="#PoEnterProductInfoButtClick" prefHeight="25.0" prefWidth="211.0" text="ENTER PRODUCT INFO" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="287.0" prefWidth="700.0">
+         <children>
+            <TableView fx:id="PoTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="PoProductCol" prefWidth="75.0" text="PRODUCT" />
+                  <TableColumn fx:id="PoStorageCol" prefWidth="75.0" text="STORAGE" />
+                  <TableColumn fx:id="PoQuantityCol" prefWidth="75.0" text="QUANTITY" />
+                  <TableColumn fx:id="PoUnitCol" prefWidth="75.0" text="UNIT" />
+                  <TableColumn prefWidth="176.0" text="RATE">
+                     <columns>
+                        <TableColumn fx:id="PoRateKgCol" prefWidth="75.0" text="/KG" />
+                        <TableColumn fx:id="PoRateMonCol" prefWidth="75.0" text="/MON" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="PoPriceCol" prefWidth="157.0" text="PRICE" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="45.0" prefWidth="700.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="TOTAL" />
+            <TextField fx:id="PoTotal" prefHeight="25.0" prefWidth="182.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="700.0">
+         <children>
+            <HBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="PoDeleteOrderButt" disable="true" mnemonicParsing="false" onAction="#PoDeleteOrderButtClick" prefHeight="25.0" prefWidth="153.0" text="DELETE ORDER" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="PRINT BILL" />
+                  <Button fx:id="PoSaveOrderButt" mnemonicParsing="false" onAction="#PoSaveOrderButtClick" prefHeight="25.0" prefWidth="161.0" text="SAVE ORDER" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

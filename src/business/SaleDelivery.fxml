@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.SaleDeliveryController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="61.0" prefWidth="850.0">
+         <children>
+            <Label text="SALE DELIVERY">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="129.0" prefWidth="790.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="6.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="SdCustomerV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="CUSTOMER" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdInstituteV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="INSTITUTE" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdInvoiceNoV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="ORDER NO." />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdBillNoV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="BILL NO." />
+                        <TextField fx:id="SdBillNo" maxWidth="150.0" promptText="BILL NO." />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="SUBJECT" />
+                        <TextField fx:id="SdLp" maxWidth="150.0" promptText="SUBJECT" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="6.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="SdTruckNoV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="TRUCK NO." />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdTruckMobileNoV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="TRUCK MOBILE NO." />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdProductV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="PRODUCT" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdMarkaV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="BRAND" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdStorageV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="STORAGE" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="6.0">
+               <children>
+                  <VBox fx:id="SdQuantityV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="QUANTITY" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="200.0" prefWidth="100.0" spacing="2.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="UNIT" />
+                              <TextField fx:id="SdUnit" maxWidth="150.0" prefHeight="25.0" prefWidth="100.0" promptText="UNIT" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <MenuButton fx:id="SdTypeDrop" maxWidth="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="UNIT">
+                                 <items>
+                                    <RadioMenuItem fx:id="SdTypeKg" mnemonicParsing="false" onAction="#SetTextForSaleDeliveryTypeKg" text="KG" />
+                                    <RadioMenuItem fx:id="SdTypeMon" mnemonicParsing="false" onAction="#SetTextForSaleDeliveryTypeMon" text="MON" />
+                                    <RadioMenuItem fx:id="SdTypePiece" mnemonicParsing="false" onAction="#SetTextForSaleDeliveryTypePiece" text="PIECE" />
+                                 </items>
+                              </MenuButton>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="SdRateKgV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="RATE/KG/PIECE" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdRateMonV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="RATE/MON" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SdPriceV" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="PRICE" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="28.0" prefWidth="700.0">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="476.0">
+               <children>
+                  <Button fx:id="SdDeleteButt" mnemonicParsing="false" onAction="#SdDeleteButtClick" prefHeight="25.0" prefWidth="89.0" text="DELETE" />
+                  <Button fx:id="SdEditButt" mnemonicParsing="false" onAction="#SdEditButtClick" prefHeight="25.0" prefWidth="94.0" text="EDIT" />
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="5.0" prefWidth="355.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="SdEnterDeliveryInfo" mnemonicParsing="false" onAction="#SdEnterDeliveryInfoClick" prefHeight="25.0" prefWidth="206.0" text="ENTER PRODUCT INFO" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="253.0" prefWidth="850.0">
+         <children>
+            <TableView fx:id="SdTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="850.0" VBox.vgrow="ALWAYS">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="SdProductCol" prefWidth="77.0" text="PRODUCT" />
+                  <TableColumn fx:id="SdMarkaCol" prefWidth="77.0" text="BRAND" />
+                  <TableColumn fx:id="SdStorageCol" prefWidth="77.0" text="STORAGE" />
+                  <TableColumn fx:id="SdQuantityCol" prefWidth="67.0" text="QUANTITY" />
+                  <TableColumn fx:id="SdTruckNoCol" prefWidth="100.0" text="UNIT" />
+                  <TableColumn prefWidth="187.0" text="RATE">
+                     <columns>
+                        <TableColumn fx:id="SdRateKgCol" prefWidth="75.0" text="/KG" />
+                        <TableColumn fx:id="SdRateMonCol" prefWidth="75.0" text="/MON" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="SdPriceCol" prefWidth="100.0" text="PRICE" />
+               </columns>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox fx:id="TotalVbox" alignment="TOP_RIGHT" spacing="3.0">
+         <children>
+            <HBox prefHeight="0.0" prefWidth="850.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="PREVIOUS BALANCE   " />
+                        <TextField fx:id="balancecustomer" prefHeight="25.0" prefWidth="188.0" promptText="CUSTOMER BALANCE" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="SdTotalPriceH" alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="TOTAL PRICE" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="SdFreightAdvanceH" alignment="TOP_RIGHT">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="FREIGHT ADVANCE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="1.0" prefWidth="850.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="CURRENT BALANCE   " />
+                        <TextField fx:id="newBalance" prefHeight="25.0" prefWidth="188.0" promptText="NEW BALANCE" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="SdCommissionH" alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="COMMISSION" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="SdAdvanceH" alignment="TOP_RIGHT">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="ADVANCE" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <HBox prefHeight="13.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="SdSaveOrderButt" mnemonicParsing="false" onAction="#SdSaveOrderButtClick" prefHeight="25.0" prefWidth="139.0" text="SAVE DELIVERY" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="PRINT BILL" />
+                        <Button fx:id="SdDeleteDeliveryButt" disable="true" mnemonicParsing="false" onAction="#SdDeleteDeliveryButtClick" prefHeight="25.0" prefWidth="146.0" text="DELETE DELIVERY" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="SdPayablePriceH" alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="462.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="PAYABLE PRICE" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

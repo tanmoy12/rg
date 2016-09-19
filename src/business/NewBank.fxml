@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="NbAnchorPane" maxHeight="550.0" maxWidth="770.0" minHeight="550.0" minWidth="770.0" prefHeight="550.0" prefWidth="770.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.NewBankController">
+    <stylesheets>
+        <URL value="@newbank.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="242.0" layoutY="24.0" text="Enter Bank Information">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <VBox layoutX="49.0" layoutY="75.0" prefHeight="208.0" prefWidth="149.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="149.0" text="BANK NAME*              :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="181.0" text="ACCOUNT NUMBER* :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="189.0" text="ACCOUNT NAME*      :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="165.0" text="BALANCE*                   :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="NbAccountNumber" layoutX="208.0" layoutY="160.0" prefHeight="25.0" prefWidth="199.0" />
+      <Label layoutX="437.0" layoutY="110.0" prefHeight="20.0" prefWidth="94.0" text="BRANCH        :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="328.0" prefWidth="149.0" text="ADDRESS                        :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="328.0" prefHeight="20.0" prefWidth="103.0" text="PHONE NO      :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="NbDebitRadio" layoutX="439.0" layoutY="273.0" mnemonicParsing="false" text="DEBIT">
+         <toggleGroup>
+            <ToggleGroup fx:id="balance" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="NbCreditRadio" layoutX="531.0" layoutY="273.0" mnemonicParsing="false" text="CREDIT" toggleGroup="$balance" />
+      <TextArea fx:id="NbAddress" layoutX="208.0" layoutY="328.0" prefHeight="83.0" prefWidth="199.0" />
+      <TextField fx:id="NbPhoneNo" layoutX="541.0" layoutY="326.0" prefHeight="25.0" prefWidth="188.0" />
+      <MenuButton fx:id="NbTypeDrop" layoutX="439.0" layoutY="160.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="186.0" text="TYPE OF ACCOUNT">
+        <items>
+            <RadioMenuItem fx:id="NbTypeSavingsDrop" mnemonicParsing="false" onAction="#SetTextForTypeOfAccount" text="SAVINGS">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TypeOfAccount" />
+               </toggleGroup>
+            </RadioMenuItem>
+            <RadioMenuItem fx:id="NbTypeFixedDepositDrop" mnemonicParsing="false" onAction="#SetTextForTypeOfAccount" text="FIXED DEPOSIT" toggleGroup="$TypeOfAccount" />
+            <RadioMenuItem fx:id="NbTypeCreditAccountDrop" mnemonicParsing="false" onAction="#SetTextForTypeOfAccount" text="CREDIT ACCOUNT" toggleGroup="$TypeOfAccount" />
+        </items>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MenuButton>
+      <Button fx:id="NbDoneButt" layoutX="677.0" layoutY="454.0" mnemonicParsing="false" onAction="#NewBankInput" style="-fx-background-color: #252AC2;" text="DONE" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <TextField fx:id="NbBankName" layoutX="208.0" layoutY="106.0" prefHeight="25.0" prefWidth="199.0" />
+      <TextField fx:id="NbAccountName" layoutX="208.0" layoutY="218.0" prefHeight="25.0" prefWidth="199.0" />
+      <TextField fx:id="NbBranch" layoutX="541.0" layoutY="106.0" prefHeight="25.0" prefWidth="186.0" />
+      <Button fx:id="NbDeleteButt" disable="true" layoutX="67.0" layoutY="454.0" mnemonicParsing="false" onAction="#DeleteBankInput" style="-fx-background-color: #252AC2;" text="DELETE" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.BankDepositDetailsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="HeaderLab" text="BANK DEPOSIT">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="395.0" prefWidth="700.0">
+         <children>
+            <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="BdPartyV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="PARTY" wrapText="true" VBox.vgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="BdInstituteV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="INSTITUTE" wrapText="true" VBox.vgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="BdBankV" alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="BANK/CASH" wrapText="true" VBox.vgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="BdAmountV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="AMOUNT" wrapText="true" VBox.vgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="SUBJECT" wrapText="true" VBox.vgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="BdLp" maxWidth="133.0" promptText="SUBJECT" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="BtDepositRadio" mnemonicParsing="false" text="DEPOSIT">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="transtype" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="BtWithdrawalRadio" mnemonicParsing="false" text="WITHDRAWAL" toggleGroup="$transtype" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets right="5.0" />
+         </VBox.margin>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="700.0" spacing="10.0">
+         <children>
+            <Button fx:id="DeleteButt" mnemonicParsing="false" onAction="#DeleteButtClick" prefHeight="25.0" prefWidth="89.0" text="DELETE">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="EditButt" mnemonicParsing="false" onAction="#EditButtClick" prefHeight="25.0" prefWidth="87.0" text="SAVE" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

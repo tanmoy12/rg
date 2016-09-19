@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="100.0" prefWidth="450.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.AdminPassController">
+    <stylesheets>
+        <URL value="@adminpass.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="34.0" layoutY="34.0" text="ADMIN PASSWORD">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="51.0" text="REQUIRED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="Pass" layoutX="195.0" layoutY="40.0" onAction="#PassClick" prefHeight="30.0" prefWidth="224.0" />
+   </children>
+</AnchorPane>

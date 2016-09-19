@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" stylesheets="@../../../../resizeable/Front.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.FrontController">
+   <children>
+      <VBox prefHeight="555.0" prefWidth="755.0" styleClass="mainFxmlClass" stylesheets="@../../../../resizeable/Front.css">
+         <children>
+            <HBox id="top" maxHeight="100.0" prefHeight="150.0" prefWidth="756.0" styleClass="mainFxmlClass" stylesheets="@../../../../resizeable/Front.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="772.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="238.0" HBox.hgrow="NEVER">
+                     <children>
+                        <HBox fx:id="clockDV" alignment="CENTER" prefHeight="100.0" prefWidth="95.0" HBox.hgrow="ALWAYS" />
+                        <VBox prefHeight="100.0" prefWidth="116.0">
+                           <children>
+                              <HBox fx:id="clockMV" alignment="CENTER" prefHeight="66.0" prefWidth="99.0" VBox.vgrow="ALWAYS" />
+                              <HBox fx:id="clockTV" alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="99.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></HBox>
+            <HBox prefHeight="381.0" prefWidth="756.0" styleClass="mainFxmlClass" stylesheets="@../../../../resizeable/Front.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="382.0" prefWidth="759.0" style="-fx-background-color: ;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox maxWidth="210.0" minWidth="210.0" prefHeight="382.0" prefWidth="198.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox maxWidth="210.0" prefHeight="428.0" prefWidth="210.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="BankButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#BankButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="BANKS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="CustomerButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#CustomerButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="CUSTOMERS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="SupplierButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#SupplierButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="SUPPLIERS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="StockButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#StockButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="STOCKS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="ExpensesButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#ExpensesButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="EXPENSES" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="TruckButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#TruckButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="TRUCK TRANSPORT" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="BalanceSheet" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#BalanceSheetButtClick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="BALANCE SHEETS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="settingsButt" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#settingsButtclick" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="SETTINGS" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" prefWidth="50.0" styleClass="buttonClass" stylesheets="@../../../../resizeable/Front.css" text="ABOUT" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <TabPane prefHeight="382.0" prefWidth="559.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+                           <tabs>
+                              <Tab styleClass="firsttab" text="BANK/CASH ENTRIES">
+                                 <content>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox maxHeight="118.0" prefHeight="118.0" prefWidth="790.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="BANK DEPOSIT">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" layoutX="275.0" layoutY="13.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="BANK WITHDRAWAL">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox maxHeight="180.0" prefHeight="181.0" prefWidth="547.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox fx:id="BdPartyV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="PARTY" wrapText="true" VBox.vgrow="NEVER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox fx:id="BdInstituteV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="INSTITUTE" wrapText="true" VBox.vgrow="NEVER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox fx:id="BdBankV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="BANK/CASH" wrapText="true" VBox.vgrow="NEVER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox fx:id="BdAmountV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="AMOUNT" wrapText="true" VBox.vgrow="NEVER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="SUBJECT" wrapText="true" VBox.vgrow="NEVER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="BdLp" maxWidth="133.0" promptText="SUBJECT" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0">
+                                                         <children>
+                                                            <HBox alignment="BOTTOM_LEFT" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button fx:id="BdDeleteButt" mnemonicParsing="false" onAction="#BdDeleteButtClick" text="DELETE" HBox.hgrow="ALWAYS" />
+                                                                  <Button fx:id="BdEditButt" mnemonicParsing="false" onAction="#BdEditButtClick" prefHeight="25.0" prefWidth="77.0" text="EDIT" HBox.hgrow="ALWAYS" />
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button fx:id="BdEntryButt" mnemonicParsing="false" onAction="#BankDepositEntryButt" prefHeight="25.0" prefWidth="80.0" text="ENTRY" VBox.vgrow="ALWAYS" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox fx:id="BwPartyV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="PARTY" wrapText="true" VBox.vgrow="NEVER">
+                                                                           <padding>
+                                                                              <Insets left="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets top="5.0" />
+                                                                           </VBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox fx:id="BwInstituteV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="INSTITUTE" wrapText="true" VBox.vgrow="NEVER">
+                                                                           <padding>
+                                                                              <Insets left="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets top="5.0" />
+                                                                           </VBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </padding>
+                                                               <HBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </HBox.margin>
+                                                            </HBox>
+                                                            <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox fx:id="BwBankV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="BANK/CASH" wrapText="true" VBox.vgrow="NEVER">
+                                                                           <padding>
+                                                                              <Insets left="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets top="5.0" />
+                                                                           </VBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox fx:id="BwAmountV" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="AMOUNT" wrapText="true" VBox.vgrow="NEVER">
+                                                                           <padding>
+                                                                              <Insets left="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets top="5.0" />
+                                                                           </VBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="180.0" prefHeight="30.0" prefWidth="150.0" text="SUBJECT" wrapText="true" VBox.vgrow="NEVER">
+                                                                           <padding>
+                                                                              <Insets left="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets top="5.0" />
+                                                                           </VBox.margin>
+                                                                        </Label>
+                                                                        <TextField fx:id="BwLp" maxWidth="133.0" promptText="SUBJECT" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox prefHeight="150.0" prefWidth="283.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <HBox alignment="BOTTOM_LEFT">
+                                                                     <children>
+                                                                        <Button fx:id="BwDeleteButt" mnemonicParsing="false" onAction="#BwDeleteButtClick" text="DELETE" HBox.hgrow="ALWAYS" />
+                                                                        <Button fx:id="BwEditButt" mnemonicParsing="false" onAction="#BwEditButtClick" prefHeight="25.0" prefWidth="73.0" text="EDIT" HBox.hgrow="ALWAYS" />
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <VBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Button fx:id="BwEntryButt" maxWidth="80.0" mnemonicParsing="false" onAction="#BankWithdrawalEntry" text="ENTRY">
+                                                                           <VBox.margin>
+                                                                              <Insets right="10.0" />
+                                                                           </VBox.margin>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="407.0" prefWidth="790.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <TableView fx:id="BdTable" editable="true" prefHeight="388.0" prefWidth="567.0" HBox.hgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="depPartyCol" prefWidth="75.0" text="PARTY" />
+                                                      <TableColumn fx:id="depInstituteCol" prefWidth="75.0" text="INSTITUTE" />
+                                                      <TableColumn fx:id="depBankCashCol" prefWidth="65.0" text="BANK/CASH" />
+                                                      <TableColumn fx:id="depAmountCol" prefWidth="87.0" text="AMOUNT" />
+                                                      <TableColumn fx:id="depLpCol" prefWidth="75.0" text="SUBJECT" />
+                                                   </columns>
+                                                </TableView>
+                                                <TableView fx:id="BwTable" prefHeight="390.0" prefWidth="554.0" HBox.hgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="withPartyCol" prefWidth="75.0" text="PARTY" />
+                                                      <TableColumn fx:id="withInstituteCol" prefWidth="75.0" text="INSTITUTE" />
+                                                      <TableColumn fx:id="withBankCashCol" prefWidth="75.0" text="BANK/CASH" />
+                                                      <TableColumn fx:id="withAmountCol" prefWidth="75.0" text="AMOUNT" />
+                                                      <TableColumn fx:id="withLpCol" prefWidth="75.0" text="SUBJECT" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </Tab>
+                              <Tab text="PURCHASE ORDER    ">
+                                 <content>
+                                    <StackPane prefHeight="471.0" prefWidth="723.0">
+                                       <children>
+                                          <VBox prefHeight="471.0" prefWidth="732.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="51.0" prefWidth="790.0">
+                                                   <children>
+                                                      <Label text="PURCHASE ORDERS">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="0.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="PoViewButt" mnemonicParsing="false" onAction="#PoViewButtClick" prefHeight="25.0" prefWidth="102.0" text="VIEW" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="PoEnterProductInfoButt1" mnemonicParsing="false" onAction="#PoEntryClick" prefHeight="25.0" prefWidth="211.0" text="ENTER  PURCHASE ORDER" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="PoTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="774.0" VBox.vgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="PoOrderNoCol" prefWidth="71.33331298828125" text="ORDER&#10;   NO." />
+                                                      <TableColumn fx:id="PoSupplierCol" prefWidth="107.0" text="SUPPLIER&#10;" />
+                                                      <TableColumn fx:id="PoInstituteNameCol" prefWidth="80.33332824707031" text="INSTITUTE&#10;" />
+                                                      <TableColumn fx:id="PoProductCol" prefWidth="75.0" text="PRODUCT" />
+                                                      <TableColumn fx:id="PoStorageCol" prefWidth="75.0" text="STORAGE" />
+                                                      <TableColumn fx:id="PoQuantityCol" prefWidth="75.0" text="QUANTITY" />
+                                                      <TableColumn fx:id="PoUnitCol" prefWidth="75.0" text="UNIT" />
+                                                      <TableColumn prefWidth="176.0" text="RATE">
+                                                         <columns>
+                                                            <TableColumn fx:id="PoRateKgCol" prefWidth="75.0" text="/KG" />
+                                                            <TableColumn fx:id="PoRateMonCol" prefWidth="75.0" text="/MON" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn fx:id="PoPriceCol" prefWidth="157.0" text="PRICE" />
+                                                      <TableColumn fx:id="PoLpCol" prefWidth="157.0" text="SUBJECT" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="SALE ORDER          ">
+                                 <content>
+                                    <StackPane>
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="35.0" prefWidth="790.0">
+                                                   <children>
+                                                      <Label text="SALE ORDERS">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <HBox prefHeight="0.0" prefWidth="790.0">
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="495.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="SoViewButt" mnemonicParsing="false" onAction="#SoViewButtClick" prefHeight="25.0" prefWidth="102.0" text="VIEW" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="SoEnterProductInfoButt" maxWidth="171.0" mnemonicParsing="false" onAction="#SoEntryButtClick" prefHeight="25.0" prefWidth="171.0" text="ENTER SALE ORDER">
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="SoTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="790.0" VBox.vgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="SoOrderNoCol" prefWidth="71.33331298828125" text="ORDER&#10;   NO." />
+                                                      <TableColumn fx:id="SoCustomerNameCol" prefWidth="107.0" text="CUSTOMER&#10;    NAME" />
+                                                      <TableColumn fx:id="SoInstituteNameCol" prefWidth="80.33332824707031" text="INSTITUTE&#10;   NAME" />
+                                                      <TableColumn fx:id="SoProductCol" prefWidth="75.0" text="PRODUCT" />
+                                                      <TableColumn fx:id="SoMarkaCol" prefWidth="75.0" text="BRAND" />
+                                                      <TableColumn fx:id="SoQuantityCol" prefWidth="75.0" text="QUANTITY" />
+                                                      <TableColumn fx:id="SoUnitCol" prefWidth="75.0" text="UNIT" />
+                                                      <TableColumn prefWidth="176.0" text="RATE">
+                                                         <columns>
+                                                            <TableColumn fx:id="SoRateKgSubCol" prefWidth="75.0" text="/KG" />
+                                                            <TableColumn fx:id="SoRateMonSubCol" prefWidth="75.0" text="/MON" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn fx:id="SoPriceCol" prefWidth="157.0" text="PRICE" />
+                                                      <TableColumn fx:id="SoLpCol" prefWidth="75.0" text="SUBJECT" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="PURCHASE DELIVERY">
+                                 <content>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="51.0" prefWidth="790.0">
+                                                   <children>
+                                                      <Label text="PURCHASE DELIVERY">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="44.0" prefWidth="790.0">
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="608.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="PdViewButt" mnemonicParsing="false" onAction="#PdViewButtClick" prefHeight="25.0" prefWidth="102.0" text="VIEW" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="PdEnterProductInfo" mnemonicParsing="false" onAction="#PdEntryButtClick" prefHeight="25.0" prefWidth="205.0" text="ENTER PRODUCT DELIVERY" />
+                                                   </children></HBox>
+                                                <TableView fx:id="PdTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="790.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="PdDeliveryNoCol" prefWidth="75.0" text="DELIVERY NO" />
+                                                      <TableColumn fx:id="PdOrderNoCol" prefWidth="75.0" text="ORDER NO." />
+                                                      <TableColumn fx:id="PdSupplierCol" prefWidth="75.0" text="SUPPLIER" />
+                                                      <TableColumn fx:id="PdInstituteCol" prefWidth="75.0" text="INSTITUTE" />
+                                                      <TableColumn fx:id="PdProductCol" prefWidth="75.0" text="PRODUCT" />
+                                                      <TableColumn fx:id="PdStorageCol" prefWidth="75.0" text="STORAGE" />
+                                                      <TableColumn fx:id="PdQuantityCol" prefWidth="75.0" text="QUANTITY" />
+                                                      <TableColumn fx:id="PdUnitCol" prefWidth="75.0" text="UNIT" />
+                                                      <TableColumn prefWidth="161.0" text="RATE">
+                                                         <columns>
+                                                            <TableColumn fx:id="PdRateKgCol" prefWidth="75.0" text="/KG" />
+                                                            <TableColumn fx:id="PdRateMonCol" prefWidth="75.0" text="/MON" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn fx:id="PdPriceCol" prefWidth="128.0" text="PRICE" />
+                                                      <TableColumn fx:id="PdLpCol" prefWidth="75.0" text="SUBJECT" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="SALE DELIVERY     ">
+                                 <content>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="419.0" prefWidth="790.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="51.0" prefWidth="790.0">
+                                                   <children>
+                                                      <Label text="SALE DELIVERIES">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="32.0" prefWidth="790.0">
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="32.0" prefWidth="641.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="SdViewButt" mnemonicParsing="false" onAction="#SdViewButtClick" prefHeight="25.0" prefWidth="102.0" text="VIEW" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button fx:id="SdEnterDeliveryInfo" mnemonicParsing="false" onAction="#SdEntryButtClick" prefHeight="25.0" prefWidth="225.0" text="ENTER DELIVERY INFO">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="SdTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="770.0" VBox.vgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="SdBillNoCol" prefWidth="95.0" text="BILL NO." />
+                                                      <TableColumn fx:id="SdOrderNoCol" prefWidth="95.0" text="ORDER NO." />
+                                                      <TableColumn fx:id="SdCustomerCol" prefWidth="104.0" text="CUSTOMER" />
+                                                      <TableColumn fx:id="SdInstituteCol" prefWidth="102.0" text="INSTITUTE" />
+                                                      <TableColumn fx:id="SdTruckNoCol" prefWidth="100.0" text="TRUCK NO." />
+                                                      <TableColumn fx:id="SdProductCol" prefWidth="77.0" text="PRODUCT" />
+                                                      <TableColumn fx:id="SdStorageCol" prefWidth="95.0" text="STORAGE" />
+                                                      <TableColumn fx:id="SdQuantityCol" prefWidth="67.0" text="QUANTITY" />
+                                                      <TableColumn fx:id="SdUnitCol" prefWidth="75.0" text="UNIT" />
+                                                      <TableColumn prefWidth="187.0" text="RATE">
+                                                         <columns>
+                                                            <TableColumn fx:id="SdRateKgCol" prefWidth="75.0" text="/KG" />
+                                                            <TableColumn fx:id="SdRateMonCol" prefWidth="75.0" text="/MON" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn fx:id="SdPriceCol" prefWidth="100.0" text="PRICE" />
+                                                      <TableColumn fx:id="SdLpCol" prefWidth="95.0" text="SUBJECT" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="EXPENSE/REVENUE">
+                                 <content>
+                                    <HBox prefHeight="467.0" prefWidth="790.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="113.0" prefWidth="390.0">
+                                                   <children>
+                                                      <Label text="EXPENSE ENTRIES">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="67.0" prefWidth="395.0" spacing="10.0">
+                                                   <children>
+                                                      <VBox fx:id="EeExpenseV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="EXPENSE">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="REMARKS">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="EeRemarks" promptText="REMARKS">
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox fx:id="EeBankCashV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="BANK/CASH">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="67.0" prefWidth="395.0" spacing="10.0">
+                                                   <children>
+                                                      <VBox fx:id="EeAmountV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="AMOUNT">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="SUBJECT">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="EeLp" promptText="SUBJECT">
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="380.0">
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="EeDeleteButt" mnemonicParsing="false" onAction="#EeDeleteButtClick" text="DELETE" />
+                                                            <Button fx:id="EeEditButt" mnemonicParsing="false" onAction="#EeEditButtClick" prefHeight="25.0" prefWidth="60.0" text="EDIT" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </HBox>
+                                                      <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="EeEntryButt" mnemonicParsing="false" onAction="#EnterExpenseInfoButtClick" text="ENTRY" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <TableView fx:id="EeTable" editable="true" prefHeight="388.0" prefWidth="567.0" VBox.vgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="EeExpenseCol" prefWidth="75.0" text="EXPENSE" />
+                                                      <TableColumn fx:id="EeRemarksCol" prefWidth="75.0" text="REMARKS" />
+                                                      <TableColumn fx:id="EeBankCashCol" prefWidth="65.0" text="BANK/CASH" />
+                                                      <TableColumn fx:id="EeAmountCol" prefWidth="87.0" text="AMOUNT" />
+                                                      <TableColumn fx:id="EeLpCol" prefWidth="75.0" text="L.P." />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="113.0" prefWidth="390.0">
+                                                   <children>
+                                                      <Label text="REVENUE ENTRIES">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="67.0" prefWidth="395.0" spacing="10.0">
+                                                   <children>
+                                                      <VBox fx:id="ReRevenueV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="REVENUE">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="REMARKS">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="ReRemarks" promptText="REMARKS">
+                                                               <VBox.margin>
+                                                                  <Insets right="3.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox fx:id="ReBankCashV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="BANK/CASH">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="67.0" prefWidth="395.0" spacing="10.0">
+                                                   <children>
+                                                      <VBox fx:id="ReAmountV" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="AMOUNT">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="SUBJECT">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="7.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="ReLp" promptText="SUBJECT">
+                                                               <VBox.margin>
+                                                                  <Insets right="3.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="ReDeleteButt" mnemonicParsing="false" onAction="#ReDeleteButtClick" text="DELETE" />
+                                                            <Button fx:id="ReEditButt" mnemonicParsing="false" onAction="#ReEditButtClick" prefHeight="25.0" prefWidth="62.0" text="EDIT" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="ReEntryButt" mnemonicParsing="false" onAction="#EnterRevenueInfoButtClick" text="ENTRY" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <TableView fx:id="ReTable" editable="true" prefHeight="388.0" prefWidth="567.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="ReRevenueCol" prefWidth="75.0" text="REVENUE" />
+                                                      <TableColumn fx:id="ReRemarksCol" prefWidth="75.0" text="REMARKS" />
+                                                      <TableColumn fx:id="ReBankCashCol" prefWidth="65.0" text="BANK/CASH" />
+                                                      <TableColumn fx:id="ReAmountCol" prefWidth="87.0" text="AMOUNT" />
+                                                      <TableColumn fx:id="ReLpCol" prefWidth="75.0" text="L.P." />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

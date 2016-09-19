@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="truckAnchor" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.TruckTransController">
+    <stylesheets>
+        <URL value="@trucktrans.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="truckTable" layoutY="147.0" prefHeight="452.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="truckDateCol" prefWidth="87.0" text="DATE" />
+          <TableColumn fx:id="truckCustomerCol" prefWidth="118.0" text="CUSTOMER" />
+            <TableColumn fx:id="truckTruckNoCol" prefWidth="127.0" text="TRUCK NO." />
+            <TableColumn fx:id="truckBillNoCol" prefWidth="144.0" text="BILL NO." />
+            <TableColumn fx:id="truckMobileNoCol" prefWidth="117.0" text="MOBILE NO." />
+            <TableColumn fx:id="truckStateCol" prefWidth="112.0" text="STATE" />
+        </columns>
+      </TableView>
+      <Label layoutX="340.0" layoutY="23.0" text="TRUCK TRANSPORT ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="72.0" text="TRUCK NO." />
+      <Label layoutX="278.0" layoutY="70.0" text="BILL NO." />
+      <Label layoutX="519.0" layoutY="68.0" text="CUSTOMER" />
+      <Button fx:id="truckSearchButt" layoutX="748.0" layoutY="122.0" mnemonicParsing="false" onAction="#TtSearchClick" prefHeight="25.0" prefWidth="149.0" text="SEARCH" />
+      <Button layoutY="123.0" mnemonicParsing="false" onAction="#TtViewButtClick" prefHeight="25.0" prefWidth="158.0" text="VIEW" />
+      <Button layoutX="159.0" layoutY="122.0" mnemonicParsing="false" onAction="#TtChangeButtClick" prefHeight="25.0" prefWidth="174.0" text="CHANGE STATE" />
+   </children>
+</AnchorPane>
